@@ -29,6 +29,10 @@ Debounced integer answer handling prevents excessive alerts.
 Uses functional state updates to fix stale state issues.
 
 
+STEPS TO RUN LOCALLY
+1.CLONE and pull REPO (https://github.com/vkzeus/reactquiz.git)
+2.OPEN TERMINAL IN THE ROOT FOLDER
+3.RUN "npm start"
 
 
 
