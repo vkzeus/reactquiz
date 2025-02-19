@@ -13,7 +13,7 @@ import {
   Box,
   CircularProgress,
 } from "@mui/material";
-import { useSnackbar } from "notistack"; // MUI Snackbar for notifications
+import { useSnackbar } from "notistack"; // MUI Snackbar 
 
 // Debounce function
 const debounce = (func, delay) => {
@@ -25,7 +25,7 @@ const debounce = (func, delay) => {
 };
 
 function App() {
-  const { enqueueSnackbar } = useSnackbar(); // Initialize Snackbar
+  const { enqueueSnackbar } = useSnackbar(); 
   const [data, setData] = useState(quizData);
   const [points, setPoints] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
@@ -53,8 +53,8 @@ function App() {
 
   // Handle multiple-choice answers
   const handleAnswer = (e, index) => {
-    const selectedOption = e.target.value; // Get the full option text (e.g., "A. Mercury")
-    const selectedAnswer = selectedOption.split(". ")[1]; // Extract the answer text (e.g., "Mercury")
+    const selectedOption = e.target.value; 
+    const selectedAnswer = selectedOption.split(". ")[1]; 
     const isCorrect = selectedAnswer === data[index].correctAnswer;
 
     setAttempts((prev) => ({
@@ -80,7 +80,7 @@ function App() {
           enqueueSnackbar(`✅ Correct! Score: ${prevPoints + 1}`, { variant: "success" });
           return prevPoints + 1;
         });
-        setUserAnswers((prev) => ({ ...prev, [index]: "" })); // Clear input after correct answer
+        setUserAnswers((prev) => ({ ...prev, [index]: "" })); 
       } else if (value !== "") {
         enqueueSnackbar("❌ Wrong Answer! Try again.", { variant: "error" });
       }
